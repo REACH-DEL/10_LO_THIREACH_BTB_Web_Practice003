@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice003</title>
+    <script src="./script/index.js" defer></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h1 class="text-center text-3xl font-bold font-sans">Practice 003</h1>
+    <main class="grid grid-cols-1 p-10 lg:grid-cols-2">
+      <section
+        class="flex flex-col justify-self-center gap-5 mb-10"
+        id="container-add"
+      >
+        <h1 class="text-center text-xl font-bold font-sans">Add Task</h1>
+        <label for="name" class="font-bold mb-[-10px]">Task Name</label>
+        <input
+          class="px-3 py-6 border-gray-200 border bg-gray-50 rounded-xl w-[27rem] h-[3rem]"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="HRD Homework"
+        />
+        <label for="due-date" class="font-bold mb-[-10px]">Choose Date</label>
+        <input
+          class="px-3 py-6 border-gray-200 border bg-gray-50 rounded-xl w-[27rem] h-[3rem]"
+          type="date"
+          name="due-date"
+          id="due-date"
+        />
+        <label for="priority" class="font-bold mb-[-10px]">Priority</label>
+        <select
+          class="px-3 py-2 border-gray-200 border rounded-xl w-[27rem] h-[3rem]"
+          name="priority"
+          id="priority"
+        >
+          <option value="" disabled selected>Select Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <p class="font-sans text-sm text-red-600" id="error"></p>
+        <button
+          id="add-btn"
+          class="px-4 py-2 bg-blue-500 text-white w-[40%] rounded-xl shadow-xl hover:bg-blue-400 active:bg-blue-700"
+        >
+          Add New Task
+        </button>
+      </section>
+      <section class="" id="container-right">
+        <h1 class="text-center text-xl font-bold font-sans">Task List</h1>
+
+        <div class="mt-10 relative overflow-x-auto">
+          <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-3">TASK NAME</th>
+                <th scope="col" class="px-6 py-3">DUE DATE</th>
+                <th scope="col" class="px-6 py-3">PRIORITY</th>
+                <th scope="col" class="px-6 py-3">STATUS</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
