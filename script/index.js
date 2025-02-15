@@ -65,16 +65,3 @@ addBtn.addEventListener("click", () => {
     err.innerHTML = error;
   }
 });
-
-// for (let i = 0; i < tasks.length; i++) {
-//   tableData.innerHTML = (
-//     <tr class="bg-white border-b border-gray-200 font-semibold">
-//       <th scope="row" class="px-6 py-4">
-//         {tasks[i].name}
-//       </th>
-//       <td class="px-6 py-4">Silver</td>
-//       <td class="px-6 py-4">Laptop</td>
-//       <td class="px-6 py-4">$2999</td>
-//     </tr>
-//   );
-// }
